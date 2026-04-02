@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Phone Automator — ADB + OpenCV Android automation tool." />
+  <title>Phone Automator</title>
+  <style>
+    :root{
+      --bg:#0b1020;
+      --card:#121a33;
+      --muted:#96a0c2;
+      --text:#eef2ff;
+      --accent:#7c6af7;
+      --accent2:#38bdf8;
+      --border:rgba(255,255,255,.10);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background:
+        radial-gradient(circle at top, rgba(124,106,247,.22), transparent 35%),
+        radial-gradient(circle at right, rgba(56,189,248,.14), transparent 30%),
+        var(--bg);
+      color:var(--text);
+      line-height:1.5;
+    }
+    .wrap{max-width:1100px;margin:0 auto;padding:32px 20px 56px}
+    .nav{
+      display:flex;justify-content:space-between;align-items:center;gap:16px;
+      padding:10px 0 28px;
+    }
+    .brand{font-weight:800;letter-spacing:.2px}
+    .pill{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:8px 12px;border:1px solid var(--border);border-radius:999px;
+      color:var(--muted);background:rgba(255,255,255,.03);
+      font-size:14px;
+    }
+    .hero{
+      display:grid;grid-template-columns:1.2fr .8fr;gap:20px;align-items:stretch;
+      margin-top:10px;
+    }
+    .card{
+      background:rgba(18,26,51,.86);
+      border:1px solid var(--border);
+      border-radius:24px;
+      box-shadow:0 20px 60px rgba(0,0,0,.28);
+      backdrop-filter: blur(10px);
+    }
+    .hero-main{padding:32px}
+    h1{font-size:clamp(38px,6vw,64px);line-height:1.02;margin:10px 0 16px}
+    .lead{font-size:18px;color:#d9def2;max-width:62ch;margin:0 0 22px}
+    .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;
+      padding:12px 18px;border-radius:14px;text-decoration:none;font-weight:700;
+      border:1px solid var(--border);
+    }
+    .btn.primary{background:linear-gradient(135deg,var(--accent),#5a7bff);color:white}
+    .btn.secondary{background:rgba(255,255,255,.04);color:var(--text)}
+    .meta{
+      margin-top:22px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px;
+    }
+    .meta div{padding:14px;border:1px solid var(--border);border-radius:16px;background:rgba(255,255,255,.03)}
+    .meta strong{display:block;font-size:18px}
+    .meta span{color:var(--muted);font-size:13px}
+    .side{padding:24px;display:flex;flex-direction:column;gap:14px}
+    .side h2{margin:0 0 6px;font-size:22px}
+    .list{margin:0;padding-left:18px;color:#d9def2}
+    .section{margin-top:20px;padding:24px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .tile{padding:18px;border:1px solid var(--border);border-radius:18px;background:rgba(255,255,255,.03)}
+    .tile h3{margin:0 0 8px;font-size:16px}
+    .tile p{margin:0;color:var(--muted);font-size:14px}
+    .footer{
+      margin-top:20px;padding:18px 24px;color:var(--muted);font-size:14px
+    }
+    code{background:rgba(255,255,255,.06);padding:2px 6px;border-radius:8px}
+    a{color:#9fe4ff}
+    @media (max-width: 860px){
+      .hero{grid-template-columns:1fr}
+      .meta,.grid{grid-template-columns:1fr}
+      .nav{flex-direction:column;align-items:flex-start}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="nav">
+      <div class="brand">Phone Automator</div>
+      <div class="pill">ADB + OpenCV • Android automation script</div>
+    </div>
+
+    <div class="hero">
+      <section class="card hero-main">
+        <div class="pill">Ready for crypto payment setup</div>
+        <h1>Android UI automation for repetitive tasks.</h1>
+        <p class="lead">
+          Phone Automator is a local Python tool for Android devices. It records templates from the screen,
+          detects them with OpenCV, and can click, long-press, or swipe automatically through ADB.
+        </p>
+        <div class="actions">
+          <a class="btn primary" href="#contact">Contact / Order</a>
+          <a class="btn secondary" href="#features">View features</a>
+        </div>
+        <div class="meta">
+          <div><strong>Local</strong><span>No cloud dependency</span></div>
+          <div><strong>Flexible</strong><span>Click, long press, swipe</span></div>
+          <div><strong>Simple</strong><span>Python + ADB setup</span></div>
+        </div>
+      </section>
+
+      <aside class="card side">
+        <h2>What is included</h2>
+        <ul class="list">
+          <li>Python source code</li>
+          <li>README / usage guide</li>
+          <li>Template storage structure</li>
+          <li>Local automation workflow</li>
+        </ul>
+        <div class="tile">
+          <h3>Best for</h3>
+          <p>Repetitive Android workflows, pop-up handling, and screen-based automation.</p>
+        </div>
+        <div class="tile">
+          <h3>Delivery</h3>
+          <p>Digital download after payment confirmation.</p>
+        </div>
+      </aside>
+    </div>
+
+    <section id="features" class="card section">
+      <h2 style="margin-top:0">Features</h2>
+      <div class="grid">
+        <div class="tile">
+          <h3>Template detection</h3>
+          <p>Record a screen area and let the app find it again later.</p>
+        </div>
+        <div class="tile">
+          <h3>Automation actions</h3>
+          <p>Click, long-press, and swipe actions with per-template settings.</p>
+        </div>
+        <div class="tile">
+          <h3>Ignore zones</h3>
+          <p>Bind zones to specific screen markers so they only work on the right page.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card section">
+      <h2 style="margin-top:0">Purchase notes</h2>
+      <p style="margin:0;color:var(--muted)">
+        This page is a simple product landing page for a digital software tool. Replace the contact email,
+        wallet address, and pricing details with your own before sharing the link with buyers or a payment provider.
+      </p>
+    </section>
+
+    <section id="contact" class="card section">
+      <h2 style="margin-top:0">Contact</h2>
+      <p style="margin:0 0 8px;color:var(--muted)">
+        Email: <code>your@email.com</code>
+      </p>
+      <p style="margin:0;color:var(--muted)">
+        Crypto payout wallet will be added in your payment provider account.
+      </p>
+    </section>
+
+    <div class="footer">
+      Hosted on GitHub Pages. Replace this text with your own brand details if needed.
+    </div>
+  </div>
+</body>
+</html>
